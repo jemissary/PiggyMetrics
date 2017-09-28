@@ -23,6 +23,7 @@ services:
   registry:
     environment:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
+      CONFIG_SERVICE_SERVER: $CONFIG_SERVICE_SERVER
     image: sqshq/piggymetrics-registry
     restart: always
     depends_on:
@@ -38,6 +39,7 @@ services:
   gateway:
     environment:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
+      CONFIG_SERVICE_SERVER: $CONFIG_SERVICE_SERVER
     image: sqshq/piggymetrics-gateway
     restart: always
     depends_on:
@@ -57,6 +59,7 @@ services:
       STATISTICS_SERVICE_PASSWORD: $STATISTICS_SERVICE_PASSWORD
       ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
       MONGODB_PASSWORD: $MONGODB_PASSWORD
+      CONFIG_SERVICE_SERVER: $CONFIG_SERVICE_SERVER
     image: sqshq/piggymetrics-auth-service
     restart: always
     depends_on:
@@ -82,6 +85,7 @@ services:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
       ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
       MONGODB_PASSWORD: $MONGODB_PASSWORD
+      CONFIG_SERVICE_SERVER: $CONFIG_SERVICE_SERVER
     image: sqshq/piggymetrics-account-service
     restart: always
     depends_on:
@@ -108,6 +112,7 @@ services:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
       MONGODB_PASSWORD: $MONGODB_PASSWORD
       STATISTICS_SERVICE_PASSWORD: $STATISTICS_SERVICE_PASSWORD
+      CONFIG_SERVICE_SERVER: $CONFIG_SERVICE_SERVER
     image: sqshq/piggymetrics-statistics-service
     restart: always
     depends_on:
@@ -133,6 +138,7 @@ services:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
       MONGODB_PASSWORD: $MONGODB_PASSWORD
       NOTIFICATION_SERVICE_PASSWORD: $NOTIFICATION_SERVICE_PASSWORD
+      CONFIG_SERVICE_SERVER: $CONFIG_SERVICE_SERVER
     image: sqshq/piggymetrics-notification-service
     restart: always
     depends_on:
@@ -156,6 +162,7 @@ services:
   monitoring:
     environment:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
+      CONFIG_SERVICE_SERVER: $CONFIG_SERVICE_SERVER
     image: sqshq/piggymetrics-monitoring
     restart: always
     depends_on:
