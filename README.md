@@ -240,6 +240,8 @@ If you'd like to build images yourself (with some changes in the code, for examp
 
 `docker-compose.dev.yml` inherits `docker-compose.yml` with additional possibility to build images locally and expose all containers ports for convenient development.
 
+you can run command:source PiggyMetrics.sh on your local docker start terminal (base on Dockertoolbox) to start development mode.
+
 #### Important endpoints
 - http://localhost:80 - Gateway
 - http://localhost:8761 - Eureka Dashboard
